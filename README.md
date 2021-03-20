@@ -69,4 +69,4 @@ docker rmi <nombre>
 kubectl create secret tls wildcard-katchplus-certificate --cert ./fullchain.pem --key ./privkey.pem 
 
 //Comando PATCH para recontruir los pods
-kubectl patch deployment katch-user-api [-n dev] -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"19012021\"}}}}}"
+kubectl patch deployment translations-api -n prod -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"19032021\"}}}}}"

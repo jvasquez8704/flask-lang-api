@@ -1,6 +1,6 @@
 from flask_restful import Resource, reqparse, request
 import time
-from utils import KEY_DATA, H_LANG, EN_US, ZH_CN, DE_DE, PR_PR, ES_ES, HEADER_TAG
+from utils import KEY_DATA, H_LANG, EN_US, ZH_CN, DE_DE, PR_PR, HEADER_TAG
 from db import Lang as lang
 
 class Lang(Resource):
@@ -22,8 +22,8 @@ class Lang(Resource):
         if data[H_LANG] == DE_DE:
             return {KEY_DATA: lang.DE[pageId] }, 200
         
-        if data[H_LANG] == ES_ES:
-            return {KEY_DATA: lang.ES[pageId] }, 200
+        #if data[H_LANG] == ES_ES:
+         #   return {KEY_DATA: lang.ES[pageId] }, 200
         
         if data[H_LANG] == PR_PR:
             return {KEY_DATA: lang.PR[pageId] }, 200
